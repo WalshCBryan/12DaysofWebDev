@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("../img/snowyBG.jpg");
+}
+
+#header {
+    display: block;
+    /*text-align: center;*/
+    font-size: 8rem!important;
+}
+
+#listHolder {
+    width: 50%;
+    margin: auto;
+    background-color: darkred;
+    border: 5px solid green;
+    border-radius: 10px;
+}
+
+#songlist {
+    list-style-type: none;
+    color: snow;
+}
+
+/* unvisited link */
+a:link {
+    color: snow;
+}
+
+/* visited link */
+a:visited {
+    color: grey;
+}
+
+/* mouse over link */
+a:hover {
+    color: green;
+}
+
+/* selected link */
+a:active {
+    color: limegreen;
+}
+
+.songs:hover {
+}
+
+h5 {
+    color: snow;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>12 Days of Web Development</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/SongList.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<div id="header" class="pt-5 text-center">
+    <h1>Merry Christmas</h1>
+</div>
+
+<div id="listHolder" class="mt-5 pb-5 pt-2">
+    <h5 class="text-center">My Favorite Christmas Songs</h5>
+    <ul id="songlist" class="text-center">
+        <li class="songs"><a href="https://www.youtube.com/watch?v=qTx-sdR6Yzk">Dropkick Murphys - The Season's Upon
+            Us</a></li>
+        <li class="songs"><a href="https://www.youtube.com/watch?v=wdN_8OlJGs0">The Chipmunks - Christmas Don't Be
+            Late</a></li>
+        <li class="songs"><a href="https://www.youtube.com/watch?v=35WgpMq6e3o">Thurl Ravenscroft - You're a Mean One,
+            Mr. Grinch</a></li>
+        <li class="songs"><a href="https://www.youtube.com/watch?v=Tf3xIWa6M28">Sex Pistols - Punk Rock Christmas</a>
+        </li>
+    </ul>
+    <span class="text-center d-block" style="color:white"> Add a Song to the List</span>
+    <div class="text-center">
+        <input id="addartist" type="text" class="p-1 m-2" placeholder="song artist here...">
+        <input id="addsong" type="text" class="p-1 m-2" placeholder="song title here..."><br>
+        <input id="addurl" type="text" class="p-1 mb-3" placeholder="song url here..."><br>
+        <button id="submit" type="submit" class="btn-success p-1">Add a Song</button>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#submit").click(function () {
+            $("#songlist").append("<li><a href=" + $('#addurl').val() + ">" +$('#addartist').val + " - " +  $('#addsong').val() + "</a></li>");
+        });
+
+    })
+</script>
+
+</body>
+</html>
