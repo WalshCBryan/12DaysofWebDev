@@ -47,7 +47,10 @@
 <script>
     $(document).ready(function () {
         $("#submit").click(function () {
-            $("#songlist").append("<li><a href=" + $('#addurl').val() + ">" +$('#addartist').val + " - " +  $('#addsong').val() + "</a></li>");
+            $("#songlist").append('<li><a target="_blank" href="' + $("#addurl").val() + '">' + $("#addartist").val() + ' - ' +  $("#addsong").val() + '</a></li>');
+            $("#addartist").val('');
+            $("#addsong").val('');
+            $("#addurl").val('');
         });
 
     })
